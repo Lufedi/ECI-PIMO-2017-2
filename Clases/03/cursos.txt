@@ -1,0 +1,9 @@
+
+
+Español
+https://codigofacilito.com/cursos/python3
+Inglés
+https://www.codecademy.com/es/learn/python
+https://www.datacamp.com/courses/intro-to-python-for-data-science
+https://developers.google.com/edu/python/
+https://pythonschool.net/category/data-structures-algorithms.html
