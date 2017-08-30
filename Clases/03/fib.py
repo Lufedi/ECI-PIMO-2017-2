@@ -25,23 +25,30 @@ def recursion(n):
          return fib(n - 1) + fib(n - 2)
    print(fib(n))
 
+
+calls = 0
 def topDown(n):
-   #Top-down
-   memory = {1:1, 2:1}
-   def fib(n):
-       if n <= 2:
+    #Top-down
+    memory = {1:1, 2:1}
+    def fib(n):
+
+        global calls
+        calls += 1
+        if n <= 2:
            return 1
-       if n in memory:
+        if n in memory:
            return memory[n]
-       else:
+        else:
            memory[n] = fib(n-1) + fib(n-2)
            return memory[n]
-   print(fib(n))
+    print(fib(n) )
+    print("calls " + str(calls))
 
 
 
 #Bottom-up
 def bottomUp(n):
+
 
    fib = [0 for i in range(n+5)]
    fib[0] = 0
@@ -51,7 +58,8 @@ def bottomUp(n):
       fib[i] = fib[i-1] + fib[i-2]
    print(fib[n])
 
-recursion(40)
-bottomUp(100)
-topDown(100)
+#recursion(40)
+
+bottomUp(31)
+topDown(31)
 
